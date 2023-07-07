@@ -54,15 +54,14 @@ The action method takes an action in the shape (x, y, thrust) and it returns obs
 
 
 
-To create the environemnt the gymnasium library is required
+To create the environemnt
 
-        import gymnasium as gym
-    
-        env = gym.make("PodRacing-v0", render_mode="human")
+        from pod_racing import RaceTrackEnv
+
+        env = RaceTrackEnv()
 
     Then the reset and step functions can be called
 
         observations, info = env.reset()
 
          observations, reward, terminated, _, info = env.step(action)
-
